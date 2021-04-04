@@ -1,0 +1,47 @@
+@use '../utils/mixins' as m;
+
+.form-control {
+  display: none;
+  .form-group input[type='text'] {
+    box-sizing: border-box;
+    padding-inline: 10px;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid #dbdbdb;
+    color: rgb(38, 38, 38);
+  }
+  @include m.from(m) {
+    display: block;
+    .form-group input[type='text'] {
+      block-size: 25px;
+    }
+  }
+}
+
+.logos-box {
+  .icon-box {
+    inline-size: 30px;
+    block-size: 30px;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+  }
+}
+
+.navbar-footer {
+  position: fixed;
+  inline-size: 100%;
+  block-size: 48px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include m.from(m) {
+    display: none;
+  }
+}
+
+.navbar-footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline-end: 16px;
+  margin-inline-start: 16px;
+}

@@ -1,0 +1,23 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+.u-disabled {
+  display: none;
+}
+.wrapper {
+  max-inline-size: 1400px;
+  margin: auto;
+}
