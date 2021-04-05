@@ -25,12 +25,20 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-inline-size: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
 .u-disabled {
   display: none;
 }
 
 .wrapper {
-  max-inline-size: 1400px;
+  max-inline-size: 950px;
   margin: auto;
 }
 
@@ -67,6 +75,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: var(--just-white);
 }
 @media screen and (min-width: 480px) {
   .navbar-footer {
@@ -80,11 +89,13 @@ a {
   justify-content: space-between;
   margin-inline-end: 16px;
   margin-inline-start: 16px;
+  padding-block-start: 10px;
 }
 
 .header {
   position: sticky;
   inline-size: 100%;
+  top: 0;
   background-color: var(--just-white);
   z-index: 1000;
 }
@@ -104,6 +115,197 @@ a {
 }
 .header-content__logo {
   inline-size: 100px;
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-view {
+    display: none;
+  }
+}
+
+.mobile-search,
+.mobile-shooping {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+  padding-block-start: 20px;
+  background-color: var(--just-white);
+  z-index: 1000;
+  visibility: hidden;
+}
+
+.form-mobile {
+  padding-block-end: 10px;
+}
+.form-mobile input[type=text] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  padding-inline-start: 16px;
+  padding-block-start: 10px;
+  padding-block-end: 10px;
+  font-size: 16px;
+}
+
+.tags {
+  margin-block-start: 10px;
+  margin-block-end: 20px;
+  overflow: auto;
+}
+.tags span {
+  display: inline-block;
+  border: 1px solid var(--just-black);
+  padding: 10px 12px;
+  margin-inline-end: 10px;
+  border-radius: 4px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  block-size: 440px;
+  overflow: scroll;
+}
+.grid-container img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.mobile-shooping .grid-container {
+  grid-template-columns: 1fr 1fr;
+}
+
+.is-active {
+  visibility: visible;
+}
+
+.stories-content {
+  box-sizing: border-box;
+  display: flex;
+  gap: 16px;
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+  padding: 16px;
+  overflow-x: auto;
+  border: 1px solid #dbdbdb;
+}
+.stories-content figure {
+  flex-grow: 1.5;
+  flex-shrink: 0;
+  flex-basis: 20%;
+}
+.stories-content figure img {
+  border-radius: 50%;
+}
+@media screen and (min-width: 480px) {
+  .stories-content {
+    margin-block-start: 16px;
+  }
+  .stories-content figure {
+    flex-basis: 12%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .stories-content {
+    margin-inline-start: 0;
+    margin: auto;
+    margin-block-start: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .stories-content {
+    margin-inline: 0;
+  }
+}
+
+.post-article {
+  margin-block-start: 20px;
+  padding-block-end: 20px;
+  margin-block-end: 20px;
+  background-color: var(--just-white);
+}
+@media screen and (min-width: 768px) {
+  .post-article {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+}
+
+.post-heading {
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: 16px;
+  padding-block-end: 16px;
+}
+
+.post-description {
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+}
+
+.heading-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+}
+
+.post-content .user {
+  inline-size: 32px;
+  block-size: 32px;
+  border-radius: 50%;
+}
+
+.post-image img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.comment input[type=text] {
+  box-sizing: border-box;
+  inline-size: 100%;
+  block-size: 35px;
+}
+
+.logos-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+}
+.logos-box .l-side img {
+  margin-inline-end: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .post-content,
+.stories-content {
+    inline-size: 600px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .post-content {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .post-content {
+    margin-inline: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

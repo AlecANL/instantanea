@@ -1,3 +1,6 @@
 @use './utils/colors' as *;
 @forward './base/base';
 @forward './layout/header';
+@forward './layout/mobile';
+@forward './components/stories';
+@forward './components/post';

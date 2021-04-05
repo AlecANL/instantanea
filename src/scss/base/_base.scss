@@ -13,11 +13,17 @@ ul {
 a {
   text-decoration: none;
 }
+img {
+  max-inline-size: 100%;
+}
+figure {
+  margin: 0;
+}
 
 .u-disabled {
   display: none;
 }
 .wrapper {
-  max-inline-size: 1400px;
+  max-inline-size: 950px;
   margin: auto;
 }

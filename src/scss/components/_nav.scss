@@ -33,6 +33,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: var(--just-white);
   @include m.from(m) {
     display: none;
   }
@@ -44,4 +45,5 @@
   justify-content: space-between;
   margin-inline-end: 16px;
   margin-inline-start: 16px;
+  padding-block-start: 10px;
 }

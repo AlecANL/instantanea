@@ -1,0 +1,33 @@
+@use '../utils/mixins' as m;
+.stories-content {
+  box-sizing: border-box;
+  display: flex;
+  gap: 16px;
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+  padding: 16px;
+  overflow-x: auto;
+  border: 1px solid rgb(219, 219, 219);
+  figure {
+    flex-grow: 1.5;
+    flex-shrink: 0;
+    flex-basis: 20%;
+  }
+  figure img {
+    border-radius: 50%;
+  }
+  @include m.from(m) {
+    margin-block-start: 16px;
+    figure {
+      flex-basis: 12%;
+    }
+  }
+  @include m.from(l) {
+    margin-inline-start: 0;
+    margin: auto;
+    margin-block-start: 20px;
+  }
+  @include m.from(x) {
+    margin-inline: 0;
+  }
+}

@@ -1,0 +1,75 @@
+@use '../utils/mixins' as m;
+
+.post-article {
+  margin-block-start: 20px;
+  padding-block-end: 20px;
+  margin-block-end: 20px;
+
+  background-color: var(--just-white);
+  @include m.from(l) {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+}
+.post-heading {
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: 16px;
+  padding-block-end: 16px;
+}
+
+.post-description {
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+}
+.heading-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-inline-start: 16px;
+  margin-inline-end: 16px;
+}
+.post-content .user {
+  inline-size: 32px;
+  block-size: 32px;
+  border-radius: 50%;
+}
+.post-image img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  input[type='text'] {
+    box-sizing: border-box;
+    inline-size: 100%;
+    block-size: 35px;
+  }
+}
+.logos-box {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+  .l-side img {
+    margin-inline-end: 10px;
+  }
+}
+.post-content,
+.stories-content {
+  @include m.from(l) {
+    inline-size: 600px;
+  }
+}
+.post-content {
+  @include m.from(l) {
+    margin: auto;
+  }
+  @include m.from(l) {
+    margin-inline: 0;
+  }
+}

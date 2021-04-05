@@ -4,7 +4,7 @@
 .header {
   position: sticky;
   inline-size: 100%;
-
+  top: 0;
   background-color: var(--just-white);
   z-index: 1000;
   @include m.from(m) {
