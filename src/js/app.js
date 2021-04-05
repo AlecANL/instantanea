@@ -1,3 +1,5 @@
+import { getUsers } from './helpers/getUers.js';
+
 const $mobileNavbar = document.getElementById('mobile-navbar'),
   $panelMobileSearch = document.getElementById('mobile-search-panel'),
   $panelMobileReels = document.getElementById('mobile-reels-panel'),

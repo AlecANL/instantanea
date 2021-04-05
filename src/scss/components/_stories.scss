@@ -6,15 +6,55 @@
   margin-inline-start: 16px;
   margin-inline-end: 16px;
   padding: 16px;
+  background-color: var(--just-white);
   overflow-x: auto;
   border: 1px solid rgb(219, 219, 219);
   figure {
     flex-grow: 1.5;
     flex-shrink: 0;
     flex-basis: 20%;
+    text-align: center;
+    text-align: center;
   }
   figure img {
     border-radius: 50%;
+    inline-size: 74px;
+    block-size: 74px;
+    object-fit: cover;
+  }
+  .image {
+    inline-size: 80px;
+    block-size: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .is-story {
+    background: linear-gradient(
+      45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%
+    );
+    border-radius: 50%;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   }
   @include m.from(m) {
     margin-block-start: 16px;

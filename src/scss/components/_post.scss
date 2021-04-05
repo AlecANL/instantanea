@@ -2,7 +2,7 @@
 
 .post-article {
   margin-block-start: 20px;
-  padding-block-end: 20px;
+  //   padding-block-end: 20px;
   margin-block-end: 20px;
 
   background-color: var(--just-white);
@@ -42,11 +42,17 @@
 .comment {
   display: flex;
   align-items: center;
+  padding: 16px 0;
   gap: 16px;
+  border-block-start: 1px solid rgba(0, 0, 0, 0.2);
   input[type='text'] {
+    border: none;
     box-sizing: border-box;
     inline-size: 100%;
     block-size: 35px;
+  }
+  span {
+    color: var(--soft-blue);
   }
 }
 .logos-box {
@@ -66,10 +72,17 @@
   }
 }
 .post-content {
+  position: relative;
   @include m.from(l) {
     margin: auto;
   }
-  @include m.from(l) {
+  @include m.from(x) {
     margin-inline: 0;
+  }
+}
+.dashboard {
+  @include m.from(x) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }

@@ -4,6 +4,8 @@ html {
 
 body {
   margin: 0;
+  font-family: system-ui;
+  background-color: rgb(244, 244, 244);
 }
 ul {
   margin: 0;
@@ -24,6 +26,7 @@ figure {
   display: none;
 }
 .wrapper {
+  position: relative;
   max-inline-size: 950px;
   margin: auto;
 }
