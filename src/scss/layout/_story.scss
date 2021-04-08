@@ -1,0 +1,39 @@
+@use '../utils/mixins' as m;
+
+.show-story {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  block-size: 100vh;
+  display: none;
+  background-color: var(--just-black);
+  z-index: 100000;
+  &.is-active {
+    display: block;
+  }
+}
+.show-story-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+}
+.show-story .story {
+  block-size: 80vh;
+}
+
+.show-story .story img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.icon-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}

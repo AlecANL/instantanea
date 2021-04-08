@@ -4,7 +4,8 @@ const $mobileNavbar = document.getElementById('mobile-navbar'),
   $panelMobileSearch = document.getElementById('mobile-search-panel'),
   $panelMobileReels = document.getElementById('mobile-reels-panel'),
   $panelMobileShooping = document.getElementById('mobile-shooping-panel'),
-  $panelMobileAccount = document.getElementById('mobile-account-panel');
+  $panelMobileAccount = document.getElementById('mobile-account-panel'),
+  $iconCloseStory = document.getElementById('close-story');
 
 function setEscene(panel) {
   panel.classList.toggle('is-active');
@@ -32,4 +33,9 @@ function showMenu(e) {
   }
 }
 
+function showStory() {
+  window.story.classList.toggle('is-active');
+}
+
 $mobileNavbar.addEventListener('click', showMenu);
+$iconCloseStory.addEventListener('click', showStory);

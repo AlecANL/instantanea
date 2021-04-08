@@ -3,63 +3,71 @@
   box-sizing: border-box;
   display: flex;
   gap: 16px;
-  margin-inline-start: 16px;
-  margin-inline-end: 16px;
   padding: 16px;
   background-color: var(--just-white);
   overflow-x: auto;
-  border: 1px solid rgb(219, 219, 219);
+
   figure {
     flex-grow: 1.5;
     flex-shrink: 0;
     flex-basis: 20%;
     text-align: center;
     text-align: center;
+    cursor: pointer;
   }
   figure img {
     border-radius: 50%;
-    inline-size: 74px;
-    block-size: 74px;
+    inline-size: 64px;
+    block-size: 64px;
     object-fit: cover;
   }
   .image {
-    inline-size: 80px;
-    block-size: 80px;
+    position: relative;
+    inline-size: 64px;
+    block-size: 64px;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .is-story {
-    background: linear-gradient(
-      45deg,
-      #f09433 0%,
-      #e6683c 25%,
-      #dc2743 50%,
-      #cc2366 75%,
-      #bc1888 100%
-    );
-    border-radius: 50%;
+    &::before {
+      content: ' ';
+      position: absolute;
+      inline-size: 65px;
+      block-size: 65px;
+      border-radius: 50px; /*1*/
+      border: 2.5px solid transparent; /*2*/
+      background: var(--is-story) border-box; /*3*/
+      -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out; /*5'*/
+      mask-composite: exclude;
+    }
   }
-  &::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 4px;
-  }
-  &::-webkit-scrollbar-thumb:active {
-    background-color: #999999;
-  }
-  &::-webkit-scrollbar-thumb:hover {
-    background: #b3b3b3;
-    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  }
+
   @include m.from(m) {
     margin-block-start: 16px;
+    margin-inline-start: 16px;
+    margin-inline-end: 16px;
+    border: 1px solid rgb(219, 219, 219);
     figure {
       flex-basis: 12%;
+    }
+    &::-webkit-scrollbar {
+      width: 10px;
+      height: 7px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background-color: #999999;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #b3b3b3;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     }
   }
   @include m.from(l) {

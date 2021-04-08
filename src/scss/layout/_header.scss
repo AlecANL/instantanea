@@ -5,10 +5,12 @@
   position: sticky;
   inline-size: 100%;
   top: 0;
+  padding-block: 5px;
   background-color: var(--just-white);
   z-index: 1000;
   @include m.from(m) {
-    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
+    // filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
+    border-block-end: 1px solid rgb(219, 219, 219);
   }
 }
 .header-content {

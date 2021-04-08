@@ -5,6 +5,14 @@
   --just-gray: #dbdbdb;
   --just-white: #fff;
   --just-black: #000;
+  --is-story: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
 }
 
 html {
@@ -99,12 +107,13 @@ figure {
   position: sticky;
   inline-size: 100%;
   top: 0;
+  padding-block: 5px;
   background-color: var(--just-white);
   z-index: 1000;
 }
 @media screen and (min-width: 480px) {
   .header {
-    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
+    border-block-end: 1px solid #dbdbdb;
   }
 }
 
@@ -187,16 +196,54 @@ figure {
   visibility: visible;
 }
 
+.show-story {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  block-size: 100vh;
+  display: none;
+  background-color: var(--just-black);
+  z-index: 100000;
+}
+.show-story.is-active {
+  display: block;
+}
+
+.show-story-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+}
+
+.show-story .story {
+  block-size: 80vh;
+}
+
+.show-story .story img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.icon-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 .stories-content {
   box-sizing: border-box;
   display: flex;
   gap: 16px;
-  margin-inline-start: 16px;
-  margin-inline-end: 16px;
   padding: 16px;
   background-color: var(--just-white);
   overflow-x: auto;
-  border: 1px solid #dbdbdb;
 }
 .stories-content figure {
   flex-grow: 1.5;
@@ -204,46 +251,63 @@ figure {
   flex-basis: 20%;
   text-align: center;
   text-align: center;
+  cursor: pointer;
 }
 .stories-content figure img {
   border-radius: 50%;
-  inline-size: 74px;
-  block-size: 74px;
+  inline-size: 64px;
+  block-size: 64px;
   object-fit: cover;
 }
 .stories-content .image {
-  inline-size: 80px;
-  block-size: 80px;
+  position: relative;
+  inline-size: 64px;
+  block-size: 64px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.stories-content .is-story {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  border-radius: 50%;
-}
-.stories-content::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-.stories-content::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 4px;
-}
-.stories-content::-webkit-scrollbar-thumb:active {
-  background-color: #999999;
-}
-.stories-content::-webkit-scrollbar-thumb:hover {
-  background: #b3b3b3;
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+.stories-content .is-story::before {
+  content: " ";
+  position: absolute;
+  inline-size: 65px;
+  block-size: 65px;
+  border-radius: 50px;
+  /*1*/
+  border: 2.5px solid transparent;
+  /*2*/
+  background: var(--is-story) border-box;
+  /*3*/
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  /*5'*/
+  mask-composite: exclude;
 }
 @media screen and (min-width: 480px) {
   .stories-content {
     margin-block-start: 16px;
+    margin-inline-start: 16px;
+    margin-inline-end: 16px;
+    border: 1px solid #dbdbdb;
   }
   .stories-content figure {
     flex-basis: 12%;
+  }
+  .stories-content::-webkit-scrollbar {
+    width: 10px;
+    height: 7px;
+  }
+  .stories-content::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  .stories-content::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  .stories-content::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   }
 }
 @media screen and (min-width: 768px) {
