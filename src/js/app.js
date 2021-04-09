@@ -1,11 +1,17 @@
 import { getUsers } from './helpers/getUers.js';
+import { getPhotos } from './helpers/getphotos.js';
+import { render } from './render.js';
+import { Story } from './components/Story.js';
+import { Post } from './components/Post.js';
 
 const $mobileNavbar = document.getElementById('mobile-navbar'),
   $panelMobileSearch = document.getElementById('mobile-search-panel'),
   $panelMobileReels = document.getElementById('mobile-reels-panel'),
   $panelMobileShooping = document.getElementById('mobile-shooping-panel'),
   $panelMobileAccount = document.getElementById('mobile-account-panel'),
-  $iconCloseStory = document.getElementById('close-story');
+  $iconCloseStory = document.getElementById('close-story'),
+  $storiesContainer = document.getElementById('stories'),
+  $postsContainer = document.getElementById('posts');
 
 function setEscene(panel) {
   panel.classList.toggle('is-active');
@@ -39,3 +45,11 @@ function showStory() {
 
 $mobileNavbar.addEventListener('click', showMenu);
 $iconCloseStory.addEventListener('click', showStory);
+
+async function renderDOM() {
+  const list = await getPhotos();
+  console.log(list[0]);
+  render(list, Story, $storiesContainer);
+  render(list, Post, $postsContainer);
+}
+document.addEventListener('DOMContentLoaded', renderDOM);

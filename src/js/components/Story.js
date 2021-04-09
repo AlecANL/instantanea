@@ -1,13 +1,16 @@
-function Story({ image, name }) {
+export function Story({
+  image_description,
+  user_description: { profile, ing_username },
+}) {
   return `
-        <figure>
+          <figure>
             <div class="image is-story">
               <img
-                src="https://randomuser.me/api/portraits/women/19.jpg"
+                src="${profile}"
                 alt=""
               />
             </div>
-            <figcaption>Name</figcaption>
-        </figure>
+            <figcaption>${ing_username}</figcaption>
+          </figure>
         `;
 }
