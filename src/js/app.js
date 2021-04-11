@@ -47,9 +47,9 @@ $mobileNavbar.addEventListener('click', showMenu);
 $iconCloseStory.addEventListener('click', showStory);
 
 async function renderDOM() {
-  const list = await getPhotos();
-  console.log(list[0]);
-  render(list, Story, $storiesContainer);
-  render(list, Post, $postsContainer);
+  // const list = await getPhotos();
+  // console.log(list[0]);
+  // render(list, Story, $storiesContainer);
+  // render(list, Post, $postsContainer);
 }
 document.addEventListener('DOMContentLoaded', renderDOM);

@@ -4,6 +4,7 @@ export function Post({ image_description: { alt, id, image_full, likes } }) {
               <div class="post-heading">
                 <div class="heading-box">
                   <img
+                    loading="lazy"
                     class="user"
                     src="https://randomuser.me/api/portraits/women/19.jpg"
                     alt="${alt}"
