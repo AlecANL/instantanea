@@ -1,0 +1,15 @@
+.postHeading {
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+  padding-inline-start: 1rem;
+}
+.postHeading-cover {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    border-radius: 50%;
+  }
+}

@@ -1,4 +1,5 @@
 :root {
+  // font-size: 30px;
   --soft-red: #ed4756;
   --soft-blue: #3898f3;
   --darkness-blue: #306197;
@@ -13,4 +14,8 @@
     #cc2366 75%,
     #bc1888 100%
   );
+  --baseFontFamily: Avenir, 'Helvetica', 'sans-serif';
+  --baseFont: normal 1rem / normal var(--baseFontFamily);
+  --baseFontBold: normal 1rem / normal var(--baseFontFamily);
+  --smallFont: normal 0.75rem / normal var(--baseFontFamily);
 }

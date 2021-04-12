@@ -1,5 +1,15 @@
-@use './utils/colors' as *;
-// @forward './base/base';
+@use './utils/vars' as *;
+@forward './base/base';
+@forward './utils/fonts';
+@forward './components/header-nav';
+@forward './components/search';
+@forward './components/logo-box';
+@forward './components/button-icon';
+@forward './components/story';
+@forward './components/ellipsis';
+@forward './components/story-list';
+@forward './components/post-contenet';
+@forward './components/mobile-navigation';
 // @forward './layout/header';
 // @forward './layout/mobile';
 // @forward './layout/story';

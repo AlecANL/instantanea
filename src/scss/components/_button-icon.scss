@@ -1,0 +1,19 @@
+.button-icon {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  padding: 0;
+  background-color: transparent;
+  margin: 0;
+  border: none;
+  outline: none;
+  &:active {
+    transform: scale(0.97);
+  }
+  i {
+    font-size: 1.875rem;
+  }
+  svg {
+    inline-size: 2.5rem;
+    // block-size: 2.5rem;
+  }
+}

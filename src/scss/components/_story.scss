@@ -1,0 +1,39 @@
+.story {
+  inline-size: 4rem;
+  block-size: 5.25rem;
+  margin: 0;
+  text-align: center;
+}
+.story-cover {
+  position: relative;
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+.story-cover img {
+  border-radius: 50%;
+  inline-size: 3rem;
+  block-size: 3rem;
+  vertical-align: middle;
+}
+.story-title {
+  font: var(--smallFont);
+  inline-size: 100%;
+}
+.is-story {
+  &::before {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    top: 1.5px;
+    transform: translate(-50%);
+    inline-size: 3.05rem;
+    block-size: 3.05rem;
+    border-radius: 50px; /*1*/
+    border: 2.5px solid transparent; /*2*/
+    background: var(--is-story) border-box; /*3*/
+    -webkit-mask: /*4*/ linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out; /*5'*/
+    mask-composite: exclude;
+  }
+}

@@ -1,0 +1,13 @@
+.postCover {
+  //   max-block-size: 22.5rem;
+  //   block-size: 100%;
+  //   background-color: red;
+  //   overflow: hidden;
+  img {
+    inline-size: 100%;
+    vertical-align: middle;
+    //   block-size: 4rem;
+    //   block-size: inherit;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,28 @@
+@forward '../components/post-details';
+@forward '../components/post-heading';
+@forward '../components/post-cover';
+.postContent {
+  background-color: var(--just-white);
+  padding-block-end: 0.5rem;
+}
+.postDescription {
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  p {
+    margin-block-start: 0.5rem;
+  }
+}
+.postDetail {
+  display: flex;
+  align-items: center;
+  block-size: 4rem;
+  padding-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
+}
+.postDetail-iconBox {
+  flex: 1;
+  display: flex;
+  &:last-child {
+    justify-self: flex-end;
+  }
+}

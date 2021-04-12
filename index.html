@@ -21,549 +21,353 @@
       sizes="16x16"
       href="./src/assets/icons/favicon-16x16.png"
     />
-    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="./src/css/icons.css" />
     <link rel="stylesheet" href="./src/css/styles.css" />
     <title>Instantanea | Project</title>
   </head>
   <body>
-    <header class="header">
-      <div class="wrapper">
-        <div class="header-content">
-          <img
-            class="header-content__logo"
-            src="./src/assets/icons/Instantanea.svg"
-            alt=""
+    <header class="headerNav">
+      <div class="headerNav-logo">
+        <img
+          src="./src/assets/icons/Instantanea.svg"
+          alt="logo instantanea"
+          width="84"
+          height="24"
+          class="logo"
+        />
+      </div>
+      <div class="headerNav-search">
+        <form class="search">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            aria-label="search something"
           />
-          <form class="form-control">
-            <div class="form-group">
-              <input
-                placeholder="Search"
-                type="text"
-                aria-label="search users"
-              />
-            </div>
-          </form>
-          <div class="logos-box">
-            <img
-              class="icon-box"
-              src="./src/assets/icons/icon-add.svg"
-              alt="icon add"
+        </form>
+      </div>
+      <div class="headerNav-buttons">
+        <button class="button-icon" aria-label="add story" title="add">
+          <i class="icon-add" aria-hidden="true"></i>
+        </button>
+        <button
+          class="button-icon"
+          aria-hidden="true"
+          aria-label="show your activity"
+          title="show your activity"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M12 21L10.55 19.7101C5.4 15.1243 2 12.0981 2 8.3951C2 5.36894 4.415 3 7.5 3C9.24 3 10.91 3.79455 12 5.04523C13.09 3.79455 14.76 3 16.5 3C19.585 3 22 5.36894 22 8.3951C22 12.0981 18.6 15.1243 13.45 19.7101L12 21Z"
+              stroke="black"
+              stroke-width="1.5"
+              fill=""
             />
-            <img
-              class="icon-box u-disabled"
-              src="./src/assets/icons/icon-home-fill.svg"
-              alt="icon home fill"
-            />
-            <img
-              class="icon-box"
-              src="./src/assets/icons/icon-messenger.svg"
-              alt="icon messenger"
-            />
-            <img
-              class="icon-box"
-              src="./src/assets/icons/icon-heart.svg"
-              alt="icon heart"
-            />
-          </div>
-        </div>
+          </svg>
+        </button>
+        <button
+          class="button-icon"
+          aria-label="open messenger"
+          title="open messenger"
+        >
+          <i class="icon-messenger" aria-hidden="true"></i>
+        </button>
       </div>
     </header>
-    <section class="stories">
-      <div class="wrapper">
-        <div class="stories-content" id="stories">
-          <figure>
-            <div class="image is-story">
-              <img
-                src="https://randomuser.me/api/portraits/women/19.jpg"
-                alt=""
-              />
-            </div>
-            <figcaption>Name</figcaption>
-          </figure>
+    <section class="storyList">
+      <figure class="story">
+        <div class="story-cover is-story">
+          <img
+            src="https://randomuser.me/api/portraits/women/75.jpg"
+            width="64"
+            height="64"
+            alt="image user story"
+          />
         </div>
-      </div>
+        <figcaption class="story-title">
+          <span class="ellipsis">Sandra user1</span>
+        </figcaption>
+      </figure>
+      <figure class="story">
+        <div class="story-cover is-story">
+          <img
+            src="https://randomuser.me/api/portraits/women/75.jpg"
+            width="64"
+            height="64"
+            alt="image user story"
+          />
+        </div>
+        <figcaption class="story-title">
+          <span class="ellipsis">Sandra user1</span>
+        </figcaption>
+      </figure>
+      <figure class="story">
+        <div class="story-cover is-story">
+          <img
+            src="https://randomuser.me/api/portraits/women/75.jpg"
+            width="64"
+            height="64"
+            alt="image user story"
+          />
+        </div>
+        <figcaption class="story-title">
+          <span class="ellipsis">Sandra user1</span>
+        </figcaption>
+      </figure>
+      <figure class="story">
+        <div class="story-cover is-story">
+          <img
+            src="https://randomuser.me/api/portraits/women/75.jpg"
+            width="64"
+            height="64"
+            alt="image user story"
+          />
+        </div>
+        <figcaption class="story-title">
+          <span class="ellipsis">Sandra user1</span>
+        </figcaption>
+      </figure>
+      <figure class="story">
+        <div class="story-cover is-story">
+          <img
+            src="https://randomuser.me/api/portraits/women/75.jpg"
+            width="64"
+            height="64"
+            alt="image user story"
+          />
+        </div>
+        <figcaption class="story-title">
+          <span class="ellipsis">Sandra user1</span>
+        </figcaption>
+      </figure>
     </section>
-    <main class="posts">
-      <div class="wrapper">
-        <div class="dashboard">
-          <div class="post-content" id="posts">
-            <article class="post-article">
-              <div class="post-heading">
-                <div class="heading-box">
-                  <i class="icon-icon-messenger"></i>
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <span>user </span>
-                </div>
-                <img src="./src/assets/icons/icon-more.svg" alt="" />
-              </div>
-              <div class="post-image">
-                <img
-                  src="https://images.unsplash.com/photo-1617553310924-97e3c48ccde1?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-              <div class="post-description">
-                <div class="logos-box">
-                  <div class="l-side">
-                    <img src="./src/assets/icons/icon-heart.svg" alt="" />
-                    <img src="./src/assets/icons/icon-coment.svg" alt="" />
-                    <img src="./src/assets/icons/icon-share.svg" alt="" />
-                  </div>
-                  <div class="r-side">
-                    <img
-                      class="icon-save"
-                      src="./src/assets/icons/icon-save.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="description">
-                  <p>3,737 likes</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Exercitationem non est harum accusantium quas! Fugit dolorum
-                    cumque earum numquam voluptatum quae cupiditate, accusamus
-                    autem dolor vero soluta eligendi eius alias.
-                  </p>
-                </div>
-                <div class="comment">
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <input
-                    placeholder="Add a comment"
-                    type="text"
-                    aria-label="add commnet"
-                  />
-                  <span>Publicar</span>
-                </div>
-              </div>
-            </article>
-
-            <!-- <article class="post-article">
-              <div class="post-heading">
-                <div class="heading-box">
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <span>user </span>
-                </div>
-                <img src="./src/assets/icons/icon-more.svg" alt="" />
-              </div>
-              <div class="post-image">
-                <img
-                  src="https://images.unsplash.com/photo-1617553310924-97e3c48ccde1?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-              <div class="post-description">
-                <div class="logos-box">
-                  <div class="l-side">
-                    <img src="./src/assets/icons/icon-heart.svg" alt="" />
-                    <img src="./src/assets/icons/icon-coment.svg" alt="" />
-                    <img src="./src/assets/icons/icon-share.svg" alt="" />
-                  </div>
-                  <div class="r-side">
-                    <img
-                      class="icon-save"
-                      src="./src/assets/icons/icon-save.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="description">
-                  <p>3,737 likes</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Exercitationem non est harum accusantium quas! Fugit dolorum
-                    cumque earum numquam voluptatum quae cupiditate, accusamus
-                    autem dolor vero soluta eligendi eius alias.
-                  </p>
-                </div>
-                <div class="comment">
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <input
-                    placeholder="Add a comment"
-                    type="text"
-                    aria-label="add commnet"
-                  />
-                </div>
-              </div>
-            </article>
-  
-            <article class="post-article">
-              <div class="post-heading">
-                <div class="heading-box">
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <span>user </span>
-                </div>
-                <img src="./src/assets/icons/icon-more.svg" alt="" />
-              </div>
-              <div class="post-image">
-                <img
-                  src="https://images.unsplash.com/photo-1617553310924-97e3c48ccde1?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-              <div class="post-description">
-                <div class="logos-box">
-                  <div class="l-side">
-                    <img src="./src/assets/icons/icon-heart.svg" alt="" />
-                    <img src="./src/assets/icons/icon-coment.svg" alt="" />
-                    <img src="./src/assets/icons/icon-share.svg" alt="" />
-                  </div>
-                  <div class="r-side">
-                    <img
-                      class="icon-save"
-                      src="./src/assets/icons/icon-save.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="description">
-                  <p>3,737 likes</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Exercitationem non est harum accusantium quas! Fugit dolorum
-                    cumque earum numquam voluptatum quae cupiditate, accusamus
-                    autem dolor vero soluta eligendi eius alias.
-                  </p>
-                </div>
-                <div class="comment">
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <input
-                    placeholder="Add a comment"
-                    type="text"
-                    aria-label="add commnet"
-                  />
-                </div>
-              </div>
-            </article>
-  
-            <article class="post-article">
-              <div class="post-heading">
-                <div class="heading-box">
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <span>user </span>
-                </div>
-                <img src="./src/assets/icons/icon-more.svg" alt="" />
-              </div>
-              <div class="post-image">
-                <img
-                  src="https://images.unsplash.com/photo-1617553310924-97e3c48ccde1?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                  alt=""
-                />
-              </div>
-              <div class="post-description">
-                <div class="logos-box">
-                  <div class="l-side">
-                    <img src="./src/assets/icons/icon-heart.svg" alt="" />
-                    <img src="./src/assets/icons/icon-coment.svg" alt="" />
-                    <img src="./src/assets/icons/icon-share.svg" alt="" />
-                  </div>
-                  <div class="r-side">
-                    <img
-                      class="icon-save"
-                      src="./src/assets/icons/icon-save.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="description">
-                  <p>3,737 likes</p>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Exercitationem non est harum accusantium quas! Fugit dolorum
-                    cumque earum numquam voluptatum quae cupiditate, accusamus
-                    autem dolor vero soluta eligendi eius alias.
-                  </p>
-                </div>
-                <div class="comment">
-                  <img
-                    class="user"
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <input
-                    placeholder="Add a comment"
-                    type="text"
-                    aria-label="add commnet"
-                  />
-                </div>
-              </div>
-            </article> -->
-          </div>
-          <div class="aside">
-            <aside class="user-suggestion">
-              <div class="account">
-                <img
-                  src="https://randomuser.me/api/portraits/women/19.jpg"
-                  alt=""
-                />
-                <div class="description">
-                  <p>name user</p>
-                  <p>name user xD</p>
-                </div>
-                <span>Cambiar</span>
-              </div>
-              <div class="list-suggestion">
-                <p>Sugerencias para ti</p>
-                <div class="account">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <div class="description">
-                    <p>name user</p>
-                    <p>name user xD</p>
-                  </div>
-                  <span>Cambiar</span>
-                </div>
-                <div class="account">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <div class="description">
-                    <p>name user</p>
-                    <p>name user xD</p>
-                  </div>
-                  <span>Cambiar</span>
-                </div>
-                <div class="account">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <div class="description">
-                    <p>name user</p>
-                    <p>name user xD</p>
-                  </div>
-                  <span>Cambiar</span>
-                </div>
-                <div class="account">
-                  <img
-                    src="https://randomuser.me/api/portraits/women/19.jpg"
-                    alt=""
-                  />
-                  <div class="description">
-                    <p>name user</p>
-                    <p>name user xD</p>
-                  </div>
-                  <span>Cambiar</span>
-                </div>
-              </div>
-            </aside>
-          </div>
+    <article class="postContent">
+      <div class="postHeading">
+        <div class="postHeading-cover">
+          <img
+            src="https://randomuser.me/api/portraits/women/75.jpg"
+            width="32"
+            height="32"
+            alt="image user story"
+          />
+          <span>User name</span>
         </div>
+        <button class="button-icon">
+          <i class="icon-more"></i>
+        </button>
       </div>
-    </main>
-    <section class="show-story" id="story">
-      <div class="wrapper">
+      <div class="postCover">
         <img
-          id="close-story"
-          src="./src/assets/icons/icon-close.svg"
+          src="https://images.unsplash.com/photo-1618111415065-c20b4e1afd41?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
           alt=""
-          class="icon-close"
+          height="360"
+          width="360"
         />
-        <div class="show-story-content">
-          <article class="story">
-            <img
-              src="https://images.unsplash.com/photo-1617553310924-97e3c48ccde1?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-              alt=""
+      </div>
+      <div class="postDetail">
+        <div class="postDetail-iconBox">
+          <button class="button-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 21L10.55 19.7101C5.4 15.1243 2 12.0981 2 8.3951C2 5.36894 4.415 3 7.5 3C9.24 3 10.91 3.79455 12 5.04523C13.09 3.79455 14.76 3 16.5 3C19.585 3 22 5.36894 22 8.3951C22 12.0981 18.6 15.1243 13.45 19.7101L12 21Z"
+                stroke="black"
+                stroke-width="1.5"
+                fill=""
+              />
+            </svg>
+          </button>
+          <button class="button-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.8151 19.605L17.0522 18.8935C16.8383 18.8222 16.6037 18.8509 16.4133 18.9717L16.8151 19.605ZM19.605 16.815L18.9717 16.4132C18.8509 16.6036 18.8222 16.8383 18.8935 17.0522L19.605 16.815ZM21 21L20.7628 21.7115C21.0323 21.8013 21.3295 21.7312 21.5303 21.5303C21.7312 21.3294 21.8013 21.0323 21.7115 20.7628L21 21ZM12 21.75C13.9175 21.75 15.7079 21.1957 17.2169 20.2383L16.4133 18.9717C15.1374 19.7812 13.6246 20.25 12 20.25V21.75ZM2.25 12C2.25 17.3848 6.61522 21.75 12 21.75V20.25C7.44365 20.25 3.75 16.5563 3.75 12H2.25ZM12 2.25C6.61522 2.25 2.25 6.61522 2.25 12H3.75C3.75 7.44365 7.44365 3.75 12 3.75V2.25ZM21.75 12C21.75 6.61522 17.3848 2.25 12 2.25V3.75C16.5563 3.75 20.25 7.44365 20.25 12H21.75ZM20.2383 17.2168C21.1957 15.7078 21.75 13.9175 21.75 12H20.25C20.25 13.6246 19.7812 15.1374 18.9717 16.4132L20.2383 17.2168ZM18.8935 17.0522L20.2885 21.2371L21.7115 20.7628L20.3165 16.5778L18.8935 17.0522ZM21.2372 20.2885L17.0522 18.8935L16.5779 20.3165L20.7628 21.7115L21.2372 20.2885Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <button class="button-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 3.13598L2 3L10.6732 9.85505M22 3.13598L10.6732 9.85505M22 3.13598L12.1146 21L10.6732 9.85505"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <button class="button-icon">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.4895 14.6528L11.9705 14.1296L11.4383 14.6395L5.7119 20.1253C5.3004 20.4396 4.75 20.1234 4.75 19.6906V3.87126C4.75 3.82289 4.79591 3.75 4.89464 3.75H18.6508C18.7495 3.75 18.7955 3.82289 18.7955 3.87126V19.6023C18.7955 20.0405 18.2321 20.3561 17.8233 20.029L12.4895 14.6528Z"
+              stroke="black"
+              stroke-width="1.5"
             />
-          </article>
-        </div>
+          </svg>
+        </button>
       </div>
-    </section>
-
-    <!-- Mobile view -->
-    <main class="mobile-view">
-      <section class="mobile-search" id="mobile-search-panel">
-        <form class="form-mobile">
-          <input
-            placeholder="Search..."
-            type="text"
-            aria-label="search mobile
-          form"
+      <div class="postDescription">
+        <span>3,000 likes</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+          perspiciatis maiores minima
+        </p>
+      </div>
+    </article>
+    <article class="postContent">
+      <div class="postHeading">
+        <div class="postHeading-cover">
+          <img
+            src="https://randomuser.me/api/portraits/women/75.jpg"
+            width="32"
+            height="32"
+            alt="image user story"
           />
-        </form>
-        <div class="tags">
-          <span>IGTV</span>
-          <span>Decor</span>
-          <span>Travel</span>
+          <span>User name</span>
         </div>
-        <section class="grid-container">
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1617553310924-97e3c48ccde1?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-        </section>
-      </section>
-      <section class="mobile-reels" id="mobile-reels-panel"></section>
-      <section class="mobile-shooping" id="mobile-shooping-panel">
-        <form class="form-mobile">
-          <input
-            placeholder="Search..."
-            type="text"
-            aria-label="search mobile
-          form"
-          />
-        </form>
-        <div class="tags">
-          <span>IGTV</span>
-          <span>Decor</span>
-          <span>Travel</span>
+        <button class="button-icon">
+          <i class="icon-more"></i>
+        </button>
+      </div>
+      <div class="postCover">
+        <img
+          src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwyNXx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+          alt=""
+          height="360"
+          width="360"
+        />
+      </div>
+      <div class="postDetail">
+        <div class="postDetail-iconBox">
+          <button class="button-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 21L10.55 19.7101C5.4 15.1243 2 12.0981 2 8.3951C2 5.36894 4.415 3 7.5 3C9.24 3 10.91 3.79455 12 5.04523C13.09 3.79455 14.76 3 16.5 3C19.585 3 22 5.36894 22 8.3951C22 12.0981 18.6 15.1243 13.45 19.7101L12 21Z"
+                stroke="black"
+                stroke-width="1.5"
+                fill=""
+              />
+            </svg>
+          </button>
+          <button class="button-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.8151 19.605L17.0522 18.8935C16.8383 18.8222 16.6037 18.8509 16.4133 18.9717L16.8151 19.605ZM19.605 16.815L18.9717 16.4132C18.8509 16.6036 18.8222 16.8383 18.8935 17.0522L19.605 16.815ZM21 21L20.7628 21.7115C21.0323 21.8013 21.3295 21.7312 21.5303 21.5303C21.7312 21.3294 21.8013 21.0323 21.7115 20.7628L21 21ZM12 21.75C13.9175 21.75 15.7079 21.1957 17.2169 20.2383L16.4133 18.9717C15.1374 19.7812 13.6246 20.25 12 20.25V21.75ZM2.25 12C2.25 17.3848 6.61522 21.75 12 21.75V20.25C7.44365 20.25 3.75 16.5563 3.75 12H2.25ZM12 2.25C6.61522 2.25 2.25 6.61522 2.25 12H3.75C3.75 7.44365 7.44365 3.75 12 3.75V2.25ZM21.75 12C21.75 6.61522 17.3848 2.25 12 2.25V3.75C16.5563 3.75 20.25 7.44365 20.25 12H21.75ZM20.2383 17.2168C21.1957 15.7078 21.75 13.9175 21.75 12H20.25C20.25 13.6246 19.7812 15.1374 18.9717 16.4132L20.2383 17.2168ZM18.8935 17.0522L20.2885 21.2371L21.7115 20.7628L20.3165 16.5778L18.8935 17.0522ZM21.2372 20.2885L17.0522 18.8935L16.5779 20.3165L20.7628 21.7115L21.2372 20.2885Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <button class="button-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 3.13598L2 3L10.6732 9.85505M22 3.13598L10.6732 9.85505M22 3.13598L12.1146 21L10.6732 9.85505"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-        <section class="grid-container">
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1617553310924-97e3c48ccde1?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-          <img
-            src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MXwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-          />
-        </section>
-      </section>
-      <section class="mobile-account" id="mobile-account-panel"></section>
-    </main>
-    <section class="navbar-footer">
-      <div class="wrapper">
-        <div class="navbar-footer-content" id="mobile-navbar">
-          <img
-            data-menu="home"
-            src="./src/assets/icons/icon-home.svg"
-            alt="icon home"
-          />
-          <img
-            data-menu="search"
-            src="./src/assets/icons/icon-search.svg"
-            alt="icon search"
-          />
-          <img
-            data-menu="reels"
-            src="./src/assets/icons/icon-reels.svg"
+        <button class="button-icon">
+          <svg
             width="24"
             height="24"
-            alt="icon reels"
-          />
-          <img
-            data-menu="shoop"
-            src="./src/assets/icons/icon-bag-shop.svg"
-            width="24"
-            height="24"
-            alt="icon bag shop"
-          />
-          <img
-            data-menu="account"
-            src="./src/assets/icons/user-1.png"
-            alt="user 1"
-          />
-        </div>
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12.4895 14.6528L11.9705 14.1296L11.4383 14.6395L5.7119 20.1253C5.3004 20.4396 4.75 20.1234 4.75 19.6906V3.87126C4.75 3.82289 4.79591 3.75 4.89464 3.75H18.6508C18.7495 3.75 18.7955 3.82289 18.7955 3.87126V19.6023C18.7955 20.0405 18.2321 20.3561 17.8233 20.029L12.4895 14.6528Z"
+              stroke="black"
+              stroke-width="1.5"
+            />
+          </svg>
+        </button>
       </div>
-    </section>
-    <script type="module" src="./src/js/app.js"></script>
+      <div class="postDescription">
+        <span>3,000 likes</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
+          perspiciatis maiores minima
+        </p>
+      </div>
+    </article>
+    <div class="mobileNavigation">
+      <button class="button-icon">
+        <i class="icon-homeActive"></i>
+      </button>
+      <button class="button-icon">
+        <i class="icon-search"></i>
+      </button>
+      <button class="button-icon">
+        <i class="icon-reels"></i>
+      </button>
+      <button class="button-icon">
+        <i class="icon-bag-shop"></i>
+      </button>
+      <button class="button-icon">
+        <img
+          src="https://randomuser.me/api/portraits/women/75.jpg"
+          width="32"
+          height="32"
+          alt="image user story"
+        />
+      </button>
+    </div>
   </body>
 </html>

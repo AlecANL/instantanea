@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'icomoon';
-  src: url('src/assets/fonts/icomoon.eot?21ybub');
-  src: url('fsrc/assets/fonts/icomoon.eot?21ybub#iefix')
+  font-family: 'instantanea';
+  src: url('../assets/fonts/instantanea.eot?4416ux');
+  src: url('../assets/fonts/instantanea.eot?4416ux#iefix')
       format('embedded-opentype'),
-    url('src/assets/fonts/icomoon.ttf?21ybub') format('truetype'),
-    url('src/assets/fonts/icomoon.woff?21ybub') format('woff'),
-    url('src/assets/fonts/icomoon.svg?21ybub#icomoon') format('svg');
+    url('../assets/fonts/instantanea.ttf?4416ux') format('truetype'),
+    url('../assets/fonts/instantanea.woff?4416ux') format('woff'),
+    url('../assets/fonts/instantanea.svg?4416ux#instantanea') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,7 +14,7 @@
 [class^='icon-'],
 [class*=' icon-'] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'instantanea' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -27,57 +27,55 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-icon-add:before {
-  content: '\e900';
-}
-.icon-icon-bag-shop:before {
+.icon-add:before {
   content: '\e901';
 }
-.icon-icon-bag-shop-fill:before {
+.icon-bag-shop:before {
   content: '\e902';
 }
-.icon-icon-camera:before {
+.icon-bag-shopActive:before {
   content: '\e903';
 }
-.icon-icon-camera-fil:before {
+.icon-camera:before {
   content: '\e904';
 }
-.icon-icon-coment:before {
+.icon-cameraActive:before {
   content: '\e905';
 }
-.icon-icon-coment-fill:before {
-  content: '\e906';
+.icon-close:before {
+  content: '\e900';
 }
-.icon-icon-heart:before {
+.icon-coment:before {
+  content: '\e906';
   content: '\e907';
 }
-.icon-icon-heart-fill:before {
+.icon-heart:before {
   content: '\e908';
 }
-.icon-icon-home:before {
+.icon-heartActive:before {
   content: '\e909';
 }
-.icon-icon-home-fill:before {
+.icon-home:before {
   content: '\e90a';
 }
-.icon-icon-messenger:before {
+.icon-homeActive:before {
   content: '\e90b';
 }
-.icon-icon-more:before {
+.icon-messenger:before {
   content: '\e90c';
 }
-.icon-icon-reels:before {
+.icon-more:before {
   content: '\e90d';
 }
-.icon-icon-save:before {
+.icon-reels:before {
   content: '\e90e';
 }
-.icon-icon-search:before {
+.icon-save:before {
   content: '\e90f';
 }
-.icon-icon-share:before {
+.icon-search:before {
   content: '\e910';
 }
-.icon-Instantanea:before {
+.icon-share:before {
   content: '\e911';
 }

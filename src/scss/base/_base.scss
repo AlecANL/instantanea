@@ -4,7 +4,7 @@ html {
 
 body {
   margin: 0;
-  font-family: system-ui;
+  font-family: var(--baseFontFamily);
   background-color: rgb(244, 244, 244);
 }
 ul {
@@ -17,9 +17,6 @@ a {
 }
 img {
   max-inline-size: 100%;
-}
-figure {
-  margin: 0;
 }
 
 .u-disabled {
