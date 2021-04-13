@@ -70,16 +70,19 @@ img {
   left: 0;
   right: 0;
   top: 0;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  background-color: var(--just-white);
+  z-index: 1000;
+}
+
+.headerNav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   inline-size: 100%;
   block-size: 3rem;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
   box-sizing: border-box;
-  background-color: var(--just-white);
-  z-index: 1000;
 }
 
 .search {
@@ -112,9 +115,10 @@ img {
 
 .story {
   inline-size: 4rem;
-  block-size: 5.25rem;
+  block-size: 4rem;
   margin: 0;
   text-align: center;
+  cursor: pointer;
 }
 
 .story-cover {
@@ -162,7 +166,16 @@ img {
   text-overflow: ellipsis;
 }
 
-.storyList {
+@media screen and (min-width: 480px) {
+  .storyList {
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+    padding-block-start: 1.5rem;
+    padding-block-end: 1.5rem;
+  }
+}
+
+.storyList-container {
   display: flex;
   gap: 1rem;
   inline-size: 100%;
@@ -171,7 +184,27 @@ img {
   border-block-end: 1px solid #dbdbdb;
   box-sizing: border-box;
   background-color: var(--just-white);
-  overflow-x: auto;
+  overflow-y: auto;
+}
+@media screen and (min-width: 480px) {
+  .storyList-container {
+    border: 1px solid #dbdbdb;
+  }
+}
+@media screen and (min-width: 768px) {
+  .storyList-container {
+    inline-size: 38.5rem;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .storyList-container {
+    margin: 0;
+  }
+}
+
+.postDetail button {
+  cursor: pointer;
 }
 
 .postHeading {
@@ -181,11 +214,18 @@ img {
   padding-block-end: 1rem;
   padding-inline-start: 1rem;
 }
+@media screen and (min-width: 480px) {
+  .postHeading button {
+    transform: rotate(90deg);
+    margin-inline-end: 0.5rem;
+  }
+}
 
 .postHeading-cover {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
 }
 .postHeading-cover img {
   border-radius: 50%;
@@ -197,9 +237,40 @@ img {
   object-fit: contain;
 }
 
+.postComment {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 1.25rem;
+  padding-block-end: 1.25rem;
+}
+.postComment img {
+  border-radius: 50%;
+}
+.postComment form {
+  flex: 1;
+}
+.postComment form input {
+  inline-size: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0;
+  border: none;
+  outline: none;
+}
+.postComment span {
+  color: var(--soft-blue);
+}
+
 .postContent {
   background-color: var(--just-white);
   padding-block-end: 0.5rem;
+}
+@media screen and (min-width: 480px) {
+  .postContent {
+    margin-block-end: 1.5rem;
+  }
 }
 
 .postDescription {
@@ -226,6 +297,25 @@ img {
   justify-self: flex-end;
 }
 
+@media screen and (min-width: 480px) {
+  .posts {
+    padding-inline-end: 2rem;
+    padding-inline-start: 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .posts {
+    inline-size: 38.5rem;
+    padding-inline: 0;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .posts {
+    margin: 0;
+  }
+}
+
 .mobileNavigation {
   position: fixed;
   bottom: 0;
@@ -236,6 +326,71 @@ img {
   padding: 0.5rem;
   border-block-start: 1px solid #dbdbdb;
   background-color: var(--just-white);
+}
+.mobileNavigation button img {
+  border-radius: 50%;
+}
+@media screen and (min-width: 480px) {
+  .mobileNavigation {
+    display: none;
+  }
+}
+
+.is-hidden {
+  display: none;
+}
+
+.modalComment {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  inline-size: 57.5rem;
+  block-size: 36.25rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--just-white);
+}
+
+.modalComment-cover img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  inline-size: 36.25rem;
+  block-size: 36.25rem;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .modalComment-cover img {
+    display: block;
+  }
+}
+
+.modalCommet-detail {
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  inline-size: 21.25rem;
+}
+
+.comment-description {
+  padding-inline-end: 1.5rem;
+  padding-inline-start: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .comment-description {
+    padding-inline-start: 0.5rem;
+    padding-inline-end: 0.5rem;
+  }
+}
+
+.overlayModalContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000000;
 }
 
 /*# sourceMappingURL=styles.css.map */

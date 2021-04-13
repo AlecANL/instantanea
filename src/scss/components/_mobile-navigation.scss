@@ -1,3 +1,5 @@
+@use '../utils/mixins' as m;
+
 .mobileNavigation {
   position: fixed;
   bottom: 0;
@@ -8,4 +10,10 @@
   padding: 0.5rem;
   border-block-start: 1px solid rgb(219, 219, 219);
   background-color: var(--just-white);
+  button img {
+    border-radius: 50%;
+  }
+  @include m.from(m) {
+    display: none;
+  }
 }

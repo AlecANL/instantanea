@@ -1,9 +1,14 @@
+@use '../utils/mixins' as m;
 @forward '../components/post-details';
 @forward '../components/post-heading';
 @forward '../components/post-cover';
+@forward '../components/post-comment';
 .postContent {
   background-color: var(--just-white);
   padding-block-end: 0.5rem;
+  @include m.from(m) {
+    margin-block-end: 1.5rem;
+  }
 }
 .postDescription {
   padding-inline-start: 1rem;
@@ -24,5 +29,19 @@
   display: flex;
   &:last-child {
     justify-self: flex-end;
+  }
+}
+.posts {
+  @include m.from(m) {
+    padding-inline-end: 2rem;
+    padding-inline-start: 2rem;
+  }
+  @include m.from(l) {
+    inline-size: 38.5rem;
+    padding-inline: 0;
+    margin: auto;
+  }
+  @include m.from(x) {
+    margin: 0;
   }
 }

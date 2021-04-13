@@ -1,14 +1,23 @@
+@use '../utils/mixins' as m;
+
 .postHeading {
   display: flex;
   justify-content: space-between;
   padding-block-start: 1rem;
   padding-block-end: 1rem;
   padding-inline-start: 1rem;
+  @include m.from(m) {
+    button {
+      transform: rotate(90deg);
+      margin-inline-end: 0.5rem;
+    }
+  }
 }
 .postHeading-cover {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  cursor: pointer;
   img {
     border-radius: 50%;
   }

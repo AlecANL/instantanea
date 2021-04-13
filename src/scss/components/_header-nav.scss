@@ -3,14 +3,17 @@
   left: 0;
   right: 0;
   top: 0;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  background-color: var(--just-white);
+  z-index: 1000;
+}
+.headerNav-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   inline-size: 100%;
   block-size: 3rem;
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
+
   box-sizing: border-box;
-  background-color: var(--just-white);
-  z-index: 1000;
 }

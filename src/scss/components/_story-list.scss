@@ -1,4 +1,14 @@
+@use '../utils/mixins' as m;
+
 .storyList {
+  @include m.from(m) {
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+    padding-block-start: 1.5rem;
+    padding-block-end: 1.5rem;
+  }
+}
+.storyList-container {
   display: flex;
   gap: 1rem;
   inline-size: 100%;
@@ -8,5 +18,15 @@
 
   box-sizing: border-box;
   background-color: var(--just-white);
-  overflow-x: auto;
+  overflow-y: auto;
+  @include m.from(m) {
+    border: 1px solid rgb(219, 219, 219);
+  }
+  @include m.from(l) {
+    inline-size: 38.5rem;
+    margin: auto;
+  }
+  @include m.from(x) {
+    margin: 0;
+  }
 }
