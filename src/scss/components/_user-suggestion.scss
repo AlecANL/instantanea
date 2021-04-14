@@ -1,0 +1,46 @@
+@use '../utils/mixins' as m;
+.userSuggestionList {
+  position: sticky;
+  top: 5rem;
+  //   top: 0;
+  inline-size: 100%;
+}
+.userSuggestion-content {
+  position: relative;
+}
+.list {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+}
+.userSuggestion {
+  display: none;
+  @include m.from(x) {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+  }
+}
+.userSuggestion-cover img {
+  border-radius: 50%;
+}
+.userSuggestion-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+.userSugesstion-name {
+  span {
+    display: block;
+  }
+}
+.btn-blue {
+  color: var(--soft-blue);
+}
+.some {
+  position: sticky;
+  top: 0;
+}

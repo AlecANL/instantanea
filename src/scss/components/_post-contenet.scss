@@ -3,6 +3,13 @@
 @forward '../components/post-heading';
 @forward '../components/post-cover';
 @forward '../components/post-comment';
+
+.postContainer {
+  @include m.from(l) {
+    grid-column: 1 / 2;
+    grid-row: 2 /3;
+  }
+}
 .postContent {
   background-color: var(--just-white);
   padding-block-end: 0.5rem;
