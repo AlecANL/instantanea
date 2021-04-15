@@ -1,16 +1,18 @@
-export function Story({
-  image_description,
-  user_description: { profile, ing_username },
-}) {
+export function Story({ image, user: { user_id, profile, ing_username } }) {
   return `
-          <figure>
-            <div class="image is-story">
-              <img
-                src="${profile}"
-                alt=""
-              />
-            </div>
-            <figcaption>${ing_username}</figcaption>
-          </figure>
+        <figure class="story">
+          <div class="story-cover is-story">
+            <img
+              src="${profile}"
+              width="64"
+              height="64"
+              alt="${ing_username} user story"
+              data-id="${user_id}"
+            />
+          </div>
+          <figcaption class="story-title">
+            <span class="ellipsis">${ing_username}</span>
+          </figcaption>
+        </figure>
         `;
 }

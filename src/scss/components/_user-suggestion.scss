@@ -1,6 +1,10 @@
 @use '../utils/mixins' as m;
 .userSuggestionList {
   position: sticky;
+  display: none;
+  @include m.from(l) {
+    display: block;
+  }
   top: 5rem;
   //   top: 0;
   inline-size: 100%;

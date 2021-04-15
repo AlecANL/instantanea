@@ -1,5 +1,5 @@
 import { getUsers } from './helpers/getUers.js';
-import { getPhotos } from './helpers/getphotos.js';
+import { getBlogPostData } from './helpers/getData.js';
 import { render } from './render.js';
 import { Story } from './components/Story.js';
 import { Post } from './components/Post.js';
@@ -39,17 +39,17 @@ function showMenu(e) {
   }
 }
 
-function showStory() {
-  window.story.classList.toggle('is-active');
-}
+// function showStory() {
+//   window.story.classList.toggle('is-active');
+// }
 
-$mobileNavbar.addEventListener('click', showMenu);
-$iconCloseStory.addEventListener('click', showStory);
+// $mobileNavbar.addEventListener('click', showMenu);
+// $iconCloseStory.addEventListener('click', showStory);
 
 async function renderDOM() {
-  // const list = await getPhotos();
+  const list = await getBlogPostData();
   // console.log(list[0]);
-  // render(list, Story, $storiesContainer);
-  // render(list, Post, $postsContainer);
+  render(list, Story, $storiesContainer);
+  render(list, Post, $postsContainer);
 }
 document.addEventListener('DOMContentLoaded', renderDOM);

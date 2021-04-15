@@ -1,6 +1,7 @@
 @use '../utils/mixins' as m;
 .layoutContent {
   position: relative;
+  margin-block-end: 5rem;
   @include m.from(l) {
     display: grid;
     grid-template-columns: 1fr;
@@ -9,5 +10,8 @@
   }
   @include m.from(x) {
     grid-template-columns: 39.75rem 19.125rem;
+  }
+  @include m.from(m) {
+    margin-block-end: 0;
   }
 }
